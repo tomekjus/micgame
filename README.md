@@ -1,2 +1,0 @@
-# micgame
-Mikro game project

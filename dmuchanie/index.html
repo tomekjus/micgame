@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#7ec8f0">
+<title>Dmuchnij i wygraj</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scena"></canvas>
+
+<!-- HUD w trakcie gry -->
+<div id="hud" class="ukryty">
+  <div id="podpowiedz">Dmuchaj w mikrofon!</div>
+  <div class="pasek"><span>Siła</span><div class="tor"><div id="silaPasek"></div></div></div>
+  <div class="pasek"><span>Energia</span><div class="tor"><div id="energiaPasek"></div></div></div>
+  <button id="przytrzymaj" type="button">Mikrofon nie działa? Przytrzymaj tutaj</button>
+</div>
+
+<!-- Ekran startowy -->
+<div id="start" class="ekran">
+  <div class="karta">
+    <h1>Dmuchnij i wygraj!</h1>
+    <p>Dmuchaj w mikrofon telefonu. Im mocniej dmuchasz, tym mocniej wszystko się buja. Rozbujaj tak, żeby coś spadło, i sprawdź, czy wygrywasz.</p>
+    <div class="motywy">
+      <button type="button" class="motyw aktywny" data-motyw="owoce">🍎 Owoce</button>
+      <button type="button" class="motyw" data-motyw="balony">🎈 Balony</button>
+    </div>
+    <button id="graj" type="button" class="glowny">Zagraj</button>
+    <p id="blad" class="blad"></p>
+  </div>
+</div>
+
+<!-- Kalibracja -->
+<div id="kalibracja" class="ekran ukryty">
+  <div class="karta">
+    <h2>Chwila ciszy…</h2>
+    <p>Nie dmuchaj, sprawdzam hałas otoczenia.</p>
+    <div class="tor"><div id="kalibracjaPasek"></div></div>
+  </div>
+</div>
+
+<!-- Wynik -->
+<div id="wynik" class="ekran ukryty">
+  <div class="karta">
+    <div id="wynikIkona" class="ikona"></div>
+    <h2 id="wynikTytul"></h2>
+    <p id="wynikOpis"></p>
+    <p id="wynikKod" class="kod"></p>
+    <button id="jeszczeRaz" type="button" class="glowny">Zagraj ponownie</button>
+  </div>
+</div>
+
+<div id="debug" class="ukryty"></div>
+
+<script src="gra.js"></script>
+</body>
+</html>
